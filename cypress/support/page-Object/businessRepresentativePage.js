@@ -131,6 +131,15 @@ export class BusinessRepresentativePage {
         return this;
         }
     
+        confirmExit()
+
+        {
+            cy.xpath("//button[contains(.,'Exit')]").click({ force: true });
+
+            cy.wait(5000);
+    
+            return this;
+        }
 
 
 
