@@ -64,7 +64,8 @@ describe('template spec', () => {
       .setApproveCheckbox()
       .clickNext();
 
-      bankAccount.clickSaveAndExit();
+    bankAccount.clickSaveAndExit()
+      .confirmExit();
 
 
   })
