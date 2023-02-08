@@ -15,6 +15,15 @@ export class BankAccountPage {
         return this;
 
     }
+    confirmExit()
+
+        {
+            cy.get('.MuiGrid-direction-xs-row-reverse > :nth-child(2) > .MuiButton-root').doubleclick({ force: true });
+
+            cy.wait(5000);
+    
+            return this;
+        }
 
 
 }
