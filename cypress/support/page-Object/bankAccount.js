@@ -18,7 +18,7 @@ export class BankAccountPage {
     confirmExit()
 
         {
-            cy.get('.MuiGrid-direction-xs-row-reverse > :nth-child(2) > .MuiButton-root').doubleclick({ force: true });
+            cy.get('.MuiGrid-direction-xs-row-reverse > :nth-child(2) > .MuiButton-root').click({ force: true });
 
             cy.wait(5000);
     
