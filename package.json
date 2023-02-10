@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pretest-windows": "rmdir /S /Q cypress\\reports && mkdir cypress\\reports",
+    "pretest": "rm -rf cypress/reports && mkdir cypress/reports",
+    "test": "npm run pretest && npx cypress run",
+    "test-windows": "npm run pretest-windows && npx cypress run --browser chrome"
   },
   "repository": {
     "type": "git",
@@ -20,6 +23,7 @@
     "cypress": "^12.5.1"
   },
   "devDependencies": {
+    "cypress-mochawesome-reporter": "^3.3.0",
     "cypress-xpath": "^2.0.1"
   }
 }
